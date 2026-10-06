@@ -39,7 +39,7 @@
       <div class="nav-actions">
         <a href="Login.html" class="login-nav-btn">Login</a>
         <button class="icon-btn cart-icon-btn"><i class="fa-solid fa-bag-shopping"></i><span class="badge cart-count-badge">0</span></button>
-        <button class="hamburger-btn">☰</button>
+        <button class="hamburger-btn" aria-label="Toggle Navigation Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
@@ -47,7 +47,7 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu-overlay"></div>
   <div class="mobile-menu">
-    <button class="mobile-menu-close">✕</button>
+    <button class="mobile-menu-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
     <ul class="mobile-nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="Shop.html">Shop</a></li>
@@ -63,7 +63,7 @@
   <!-- Cart Drawer -->
   <div class="cart-drawer-overlay"></div>
   <div class="cart-drawer">
-    <div class="cart-drawer-header"><h3>YOUR CART</h3><button class="cart-close-btn">✕</button></div>
+    <div class="cart-drawer-header"><h3>YOUR CART</h3><button class="cart-close-btn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button></div>
     <div class="cart-drawer-body" id="cart-drawer-body"></div>
     <div class="cart-drawer-footer">
       <div class="cart-subtotal"><span>SUBTOTAL</span><span id="cart-drawer-total">₹0</span></div>
@@ -116,7 +116,7 @@
         <p style="font-size: 0.9rem; color: rgba(17,17,17,0.6); margin-bottom: 2rem;">Fill in the form below and a luxury advisor will respond within 24 hours.</p>
         
         <div id="contact-success-msg" style="display: none; background: var(--primary); color: var(--secondary); padding: 1.2rem; border-left: 4px solid var(--accent); margin-bottom: 1.5rem; font-size: 0.9rem;">
-          ✓ Thank you! Your message has been received by STACKLY Concierge.
+          <i class="fa-solid fa-check"></i> Thank you! Your message has been received by STACKLY Concierge.
         </div>
 
         <form id="contact-form" novalidate>

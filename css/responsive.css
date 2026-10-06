@@ -147,6 +147,71 @@ img, video, canvas, svg {
 
 /* --- 768px BREAKPOINT (TABLETS PORTRAIT & LARGE MOBILE) --- */
 @media (max-width: 768px) {
+  /* --- Mobile Responsive Logo Enhancements --- */
+  .navbar-brand img {
+    height: 52px !important;
+    max-height: 52px !important;
+    width: auto !important;
+  }
+  
+  .footer-brand img {
+    height: 56px !important;
+    max-height: 56px !important;
+    width: auto !important;
+  }
+
+  .sidebar-brand img {
+    height: 48px !important;
+    max-height: 48px !important;
+    width: auto !important;
+  }
+
+  /* --- Mobile Responsive Cart Icon & Badge Visibility --- */
+  .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.85rem !important;
+  }
+
+  .cart-icon-btn {
+    font-size: 1.35rem !important;
+    color: var(--accent) !important;
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.55rem 0.7rem !important;
+    background: rgba(201, 160, 80, 0.1) !important;
+    border: 1px solid rgba(201, 160, 80, 0.35) !important;
+    border-radius: 4px !important;
+    filter: drop-shadow(0 0 8px rgba(201, 160, 80, 0.4)) !important;
+    transition: var(--transition-fast) !important;
+  }
+
+  .cart-icon-btn:hover, .cart-icon-btn:active {
+    background: rgba(201, 160, 80, 0.22) !important;
+    border-color: var(--accent) !important;
+  }
+
+  .cart-count-badge {
+    position: absolute !important;
+    top: -6px !important;
+    right: -6px !important;
+    background: var(--accent-gradient, linear-gradient(135deg, #E6CA65 0%, #C9A050 100%)) !important;
+    color: #0B0C10 !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1.5px solid #0B0C10 !important;
+    box-shadow: 0 0 10px rgba(201, 160, 80, 0.9) !important;
+    z-index: 2 !important;
+  }
+
   .section-padding {
     padding: 3.5rem 1.25rem !important;
   }
@@ -298,7 +363,18 @@ img, video, canvas, svg {
   }
 
   .navbar-brand img {
-    height: 32px !important;
+    height: 48px !important;
+    max-height: 48px !important;
+  }
+
+  .footer-brand img {
+    height: 52px !important;
+    max-height: 52px !important;
+  }
+
+  .auth-card img, #404-logo-el img {
+    height: 56px !important;
+    max-height: 56px !important;
   }
 
   .section-padding {
@@ -342,15 +418,22 @@ img, video, canvas, svg {
 
 @media (max-width: 375px) {
   .navbar-brand img {
-    height: 28px !important;
+    height: 44px !important;
+    max-height: 44px !important;
+  }
+
+  .footer-brand img {
+    height: 48px !important;
+    max-height: 48px !important;
   }
 
   .nav-actions {
     gap: 0.6rem !important;
   }
 
-  .icon-btn {
-    font-size: 1.1rem !important;
+  .cart-icon-btn {
+    font-size: 1.25rem !important;
+    padding: 0.45rem 0.6rem !important;
   }
 
   .section-title {
@@ -392,16 +475,22 @@ img, video, canvas, svg {
   }
 
   .navbar-brand img {
-    height: 24px !important;
+    height: 40px !important;
+    max-height: 40px !important;
+  }
+
+  .footer-brand img {
+    height: 44px !important;
+    max-height: 44px !important;
   }
 
   .nav-actions {
     gap: 0.4rem !important;
   }
 
-  .icon-btn {
-    font-size: 1rem !important;
-    padding: 0.3rem !important;
+  .cart-icon-btn {
+    font-size: 1.2rem !important;
+    padding: 0.4rem 0.5rem !important;
   }
 
   .section-padding {

@@ -114,7 +114,7 @@ function handleAddToCartDetail() {
 
   setTimeout(() => {
     addToCart(currentProduct, currentSelectedSize, currentSelectedColor, currentQuantity);
-    btn.textContent = 'ADDED ✓';
+    btn.innerHTML = 'ADDED <i class="fa-solid fa-check"></i>';
     btn.style.backgroundColor = '#B08D57';
     btn.style.color = '#111111';
 

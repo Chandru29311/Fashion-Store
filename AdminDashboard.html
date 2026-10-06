@@ -22,7 +22,7 @@
     <!-- SIDEBAR -->
     <aside class="dashboard-sidebar">
       <div class="sidebar-header" style="position: relative;">
-        <button class="sidebar-close-btn" aria-label="Close Sidebar">✕</button>
+        <button class="sidebar-close-btn" aria-label="Close Sidebar"><i class="fa-solid fa-xmark"></i></button>
         <a href="index.html" class="sidebar-brand" style="display: inline-block;">
           <img src="assets/logo01.webp" alt="STACKLY Logo" style="height: 34px; width: auto; filter: drop-shadow(0 0 10px rgba(201,160,80,0.4));">
         </a>
@@ -78,7 +78,7 @@
       <!-- TOPBAR HEADER -->
       <header class="dashboard-topbar">
         <div style="display: flex; align-items: center; gap: 1rem;">
-          <button class="hamburger-btn dashboard-mobile-toggle" aria-label="Toggle Sidebar">☰</button>
+          <button class="hamburger-btn dashboard-mobile-toggle" aria-label="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
           <div class="topbar-title">Admin Overview</div>
         </div>
 
@@ -147,7 +147,7 @@
               <div class="table-header-flex">
                 <h3 style="font-family: var(--font-display); font-size: 1.4rem;">Recent Orders</h3>
                 <button id="refresh-orders-btn" onclick="refreshAdminOrders()" style="background: none; border: 1px solid rgba(245,242,234,0.2); color: var(--accent); padding: 0.4rem 0.8rem; font-size: 0.75rem; cursor: pointer;">
-                  ↻ REFRESH
+                  <i class="fa-solid fa-rotate-right"></i> REFRESH
                 </button>
               </div>
 
@@ -196,7 +196,7 @@
               <div class="table-header-flex">
                 <h3 style="font-family: var(--font-display); font-size: 1.4rem;">Store Notifications</h3>
                 <button id="refresh-notifs-btn" onclick="refreshAdminNotifications()" style="background: none; border: 1px solid rgba(245,242,234,0.2); color: var(--accent); padding: 0.4rem 0.8rem; font-size: 0.75rem; cursor: pointer;">
-                  ↻ REFRESH
+                  <i class="fa-solid fa-rotate-right"></i> REFRESH
                 </button>
               </div>
               <div class="notifications-list" id="admin-notifications-list">
@@ -244,7 +244,7 @@
           <div id="add-product-drawer" class="settings-card" style="display: none; margin-bottom: 2.5rem; border: 1px solid var(--border-accent); background: linear-gradient(135deg, #161822 0%, #0B0C10 100%);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
               <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--accent); margin: 0;">+ ADD NEW PRODUCT TO CATALOG</h3>
-              <button onclick="toggleAddProductForm()" style="background: none; border: none; color: var(--secondary); font-size: 1.2rem; cursor: pointer;">✕</button>
+              <button onclick="toggleAddProductForm()" style="background: none; border: none; color: var(--secondary); font-size: 1.2rem; cursor: pointer;" aria-label="Close Form"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <form onsubmit="handleAddNewProduct(event)">
               <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1.2rem; margin-bottom: 1rem;">

@@ -96,9 +96,9 @@ function renderCartDrawer() {
         <div style="font-size: 0.75rem; color: rgba(17,17,17,0.5); text-transform: uppercase; margin-bottom: 0.3rem;">Size: ${item.size} | ${item.color}</div>
         <div class="cart-item-price">₹${item.price.toLocaleString('en-IN')}</div>
         <div class="cart-item-controls">
-          <button class="qty-btn" onclick="updateCartQuantity(${item.id}, '${item.size}', '${item.color}', ${item.qty - 1})">−</button>
+          <button class="qty-btn" onclick="updateCartQuantity(${item.id}, '${item.size}', '${item.color}', ${item.qty - 1})"><i class="fa-solid fa-minus"></i></button>
           <span>${item.qty}</span>
-          <button class="qty-btn" onclick="updateCartQuantity(${item.id}, '${item.size}', '${item.color}', ${item.qty + 1})">+</button>
+          <button class="qty-btn" onclick="updateCartQuantity(${item.id}, '${item.size}', '${item.color}', ${item.qty + 1})"><i class="fa-solid fa-plus"></i></button>
         </div>
       </div>
       <button class="cart-item-remove" onclick="removeFromCart(${item.id}, '${item.size}', '${item.color}')">

@@ -38,7 +38,7 @@
       <div class="nav-actions">
         <a href="Login.html" class="login-nav-btn">Login</a>
         <button class="icon-btn cart-icon-btn"><i class="fa-solid fa-bag-shopping"></i><span class="badge cart-count-badge">0</span></button>
-        <button class="hamburger-btn">☰</button>
+        <button class="hamburger-btn" aria-label="Toggle Navigation Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
@@ -46,7 +46,7 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu-overlay"></div>
   <div class="mobile-menu">
-    <button class="mobile-menu-close">✕</button>
+    <button class="mobile-menu-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
     <ul class="mobile-nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="Shop.html">Shop</a></li>
@@ -62,7 +62,7 @@
   <!-- Cart Drawer -->
   <div class="cart-drawer-overlay"></div>
   <div class="cart-drawer">
-    <div class="cart-drawer-header"><h3>YOUR CART</h3><button class="cart-close-btn">✕</button></div>
+    <div class="cart-drawer-header"><h3>YOUR CART</h3><button class="cart-close-btn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button></div>
     <div class="cart-drawer-body" id="cart-drawer-body"></div>
     <div class="cart-drawer-footer">
       <div class="cart-subtotal"><span>SUBTOTAL</span><span id="cart-drawer-total">₹0</span></div>
@@ -90,7 +90,7 @@
       <div class="product-price-detail" id="pd-price">₹5,999</div>
 
       <div class="product-rating-detail">
-        ★★★★★ <span style="color: rgba(17,17,17,0.6);">(4.9 • 84 Client Reviews)</span>
+        <i class="fa-solid fa-star" style="color: #C9A050;"></i><i class="fa-solid fa-star" style="color: #C9A050;"></i><i class="fa-solid fa-star" style="color: #C9A050;"></i><i class="fa-solid fa-star" style="color: #C9A050;"></i><i class="fa-solid fa-star" style="color: #C9A050;"></i> <span style="color: rgba(17,17,17,0.6);">(4.9 • 84 Client Reviews)</span>
       </div>
 
       <p class="product-desc-short">
@@ -117,9 +117,9 @@
       <div class="option-group">
         <div class="option-label">QUANTITY:</div>
         <div class="quantity-control">
-          <button class="qty-action" onclick="changeQuantity(-1)">−</button>
+          <button class="qty-action" onclick="changeQuantity(-1)"><i class="fa-solid fa-minus"></i></button>
           <span class="qty-val" id="pd-qty-val">1</span>
-          <button class="qty-action" onclick="changeQuantity(1)">+</button>
+          <button class="qty-action" onclick="changeQuantity(1)"><i class="fa-solid fa-plus"></i></button>
         </div>
       </div>
 

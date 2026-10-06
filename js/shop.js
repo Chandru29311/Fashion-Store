@@ -307,7 +307,11 @@ function renderProducts(products) {
   container.innerHTML = products.map(product => {
     const isWish = isInWishlist(product.id);
     const colorDots = product.colors.map(c => `<span class="color-dot" style="background-color: ${c}"></span>`).join('');
-    const stars = '★'.repeat(Math.floor(product.rating)) + (product.rating % 1 !== 0 ? '½' : '');
+    const stars = Array.from({ length: 5 }, (_, i) => {
+      if (i < Math.floor(product.rating)) return '<i class="fa-solid fa-star" style="color: #C9A050;"></i>';
+      if (i < product.rating) return '<i class="fa-solid fa-star-half-stroke" style="color: #C9A050;"></i>';
+      return '<i class="fa-regular fa-star" style="color: #C9A050;"></i>';
+    }).join('');
 
     return `
       <div class="product-card">
