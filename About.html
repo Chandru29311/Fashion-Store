@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — STACKLY Luxury Fashion</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-logo">STACKLY</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo01.webp" alt="STACKLY Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="Shop.html" class="nav-link">Shop</a></li>
+        <li><a href="Collections.html" class="nav-link">Collections</a></li>
+        <li><a href="About.html" class="nav-link active">About</a></li>
+        <li><a href="Contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="Login.html" class="login-nav-btn">Login</a>
+        <button class="icon-btn cart-icon-btn"><i class="fa-solid fa-bag-shopping"></i><span class="badge cart-count-badge">0</span></button>
+        <button class="hamburger-btn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <button class="mobile-menu-close">✕</button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+      <li><a href="Collections.html">Collections</a></li>
+      <li><a href="About.html" class="active">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="Login.html" class="btn-accent" style="display: block; text-align: center;">LOGIN / ACCOUNT</a>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-drawer-header"><h3>YOUR CART</h3><button class="cart-close-btn">✕</button></div>
+    <div class="cart-drawer-body" id="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal"><span>SUBTOTAL</span><span id="cart-drawer-total">₹0</span></div>
+      <a href="404.html" class="btn-primary" style="display: block; text-align: center;">PROCEED TO CHECKOUT</a>
+    </div>
+  </div>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <h1>FASHION WITH AN IDENTITY.</h1>
+    <p style="color: rgba(245,242,234,0.7); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Founded on the principle that luxury fashion should empower individual statement and structural elegance.</p>
+  </section>
+
+  <!-- OUR STORY & MISSION -->
+  <section class="section-padding">
+    <div class="container story-section">
+      <div class="story-content">
+        <div style="color: var(--accent); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.8rem;">OUR ORIGIN & MISSION</div>
+        <h2>CRAFTING THE FUTURE OF CONTEMPORARY WEAR.</h2>
+        <p style="line-height: 1.8; color: rgba(17,17,17,0.75);">
+          STACKLY emerged from a vision to break away from derivative, mass-market retail templates. We blend architectural minimalism with traditional garment engineering to create capsule collections that stand out without being loud.
+        </p>
+        <p style="line-height: 1.8; color: rgba(17,17,17,0.75);">
+          Every piece is designed with extreme attention to fit, drape, texture and mobility—allowing our clients to wear their identity with unshakeable confidence.
+        </p>
+      </div>
+      <div>
+        <img src="assets/about-hero.webp" alt="STACKLY Atelier" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 1px solid var(--accent);" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: CREATIVE ATELIER LEADERSHIP -->
+  <section class="section-padding" style="background-color: var(--secondary);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">THE CREATIVE DIRECTORS</div>
+        <h2 class="section-title">THE MINDS BEHIND THE STATEMENT</h2>
+        <p>Master tailors, architectural visionaries, and textile innovators.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+        
+        <!-- Director 1 -->
+        <div class="leadership-card">
+          <img src="assets/story2.webp" alt="Elena Rostova — Creative Director" loading="lazy">
+          <div class="leadership-overlay">
+            <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem;">FOUNDER & HAUTE COUTURE LEAD</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--secondary); margin-bottom: 0.4rem;">ELENA ROSTOVA</h3>
+            <p style="font-size: 0.85rem; color: rgba(250,248,245,0.75); line-height: 1.5; margin-bottom: 1rem;">Former Milan fashion lead with 15+ years engineering structured luxury coats and fluid dresses.</p>
+            <div style="display: flex; gap: 1rem; color: var(--accent); font-size: 0.9rem;">
+              <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Director 2 -->
+        <div class="leadership-card">
+          <img src="assets/story3.webp" alt="Julian Thorne — Head of Architectural Tailoring" loading="lazy">
+          <div class="leadership-overlay">
+            <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem;">HEAD OF TAILORING</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--secondary); margin-bottom: 0.4rem;">JULIAN THORNE</h3>
+            <p style="font-size: 0.85rem; color: rgba(250,248,245,0.75); line-height: 1.5; margin-bottom: 1rem;">Savile Row master tailor specializing in avant-garde shoulder structure and weighted drape cuts.</p>
+            <div style="display: flex; gap: 1rem; color: var(--accent); font-size: 0.9rem;">
+              <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Director 3 -->
+        <div class="leadership-card">
+          <img src="assets/story1.webp" alt="Aria Chen — Sustainable Textiles Director" loading="lazy">
+          <div class="leadership-overlay">
+            <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem;">TEXTILE INNOVATION DIRECTRESS</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--secondary); margin-bottom: 0.4rem;">ARIA CHEN</h3>
+            <p style="font-size: 0.85rem; color: rgba(250,248,245,0.75); line-height: 1.5; margin-bottom: 1rem;">Pioneer in zero-emission organic silk weaving and circular fabric supply chains.</p>
+            <div style="display: flex; gap: 1rem; color: var(--accent); font-size: 0.9rem;">
+              <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FASHION PHILOSOPHY -->
+  <section class="section-padding" style="background-color: var(--primary); color: var(--secondary);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle" style="color: var(--accent);">OUR PILLARS</div>
+        <h2 class="section-title" style="color: var(--secondary);">FASHION PHILOSOPHY</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.8rem;">
+        <div style="background: #161822; padding: 2.2rem 1.8rem; border: 1px solid rgba(201,160,80,0.35); border-radius: 6px; display: flex; flex-direction: column; height: 100%;">
+          <div style="font-family: var(--font-display); font-size: clamp(1.1rem, 1.4vw, 1.45rem); color: var(--accent); font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(201,160,80,0.2); letter-spacing: 0.05em; white-space: nowrap;">01. DESIGN</div>
+          <p style="color: rgba(245,242,234,0.75); font-size: 0.9rem; line-height: 1.65; margin: 0;">Architectural cuts and proportions crafted for effortless visual balance.</p>
+        </div>
+        <div style="background: #161822; padding: 2.2rem 1.8rem; border: 1px solid rgba(201,160,80,0.35); border-radius: 6px; display: flex; flex-direction: column; height: 100%;">
+          <div style="font-family: var(--font-display); font-size: clamp(1.1rem, 1.4vw, 1.45rem); color: var(--accent); font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(201,160,80,0.2); letter-spacing: 0.05em; white-space: nowrap;">02. QUALITY</div>
+          <p style="color: rgba(245,242,234,0.75); font-size: 0.9rem; line-height: 1.65; margin: 0;">Rigorous fabric selection ensuring tactile comfort and structural durability.</p>
+        </div>
+        <div style="background: #161822; padding: 2.2rem 1.8rem; border: 1px solid rgba(201,160,80,0.35); border-radius: 6px; display: flex; flex-direction: column; height: 100%;">
+          <div style="font-family: var(--font-display); font-size: clamp(1.1rem, 1.4vw, 1.45rem); color: var(--accent); font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(201,160,80,0.2); letter-spacing: 0.05em; white-space: nowrap;">03. COMFORT</div>
+          <p style="color: rgba(245,242,234,0.75); font-size: 0.9rem; line-height: 1.65; margin: 0;">Engineered for uninhibited movement across dynamic daily environments.</p>
+        </div>
+        <div style="background: #161822; padding: 2.2rem 1.8rem; border: 1px solid rgba(201,160,80,0.35); border-radius: 6px; display: flex; flex-direction: column; height: 100%;">
+          <div style="font-family: var(--font-display); font-size: clamp(1.1rem, 1.4vw, 1.45rem); color: var(--accent); font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(201,160,80,0.2); letter-spacing: 0.05em; white-space: nowrap;">04. INDIVIDUALITY</div>
+          <p style="color: rgba(245,242,234,0.75); font-size: 0.9rem; line-height: 1.65; margin: 0;">Statement pieces that allow the wearer's authentic character to take center stage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SUSTAINABLE LUXURY MANIFESTO & ENVIRONMENTAL METRICS -->
+  <section class="section-padding" style="background-color: var(--primary); color: var(--secondary); border-top: 1px solid var(--border-accent); position: relative;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">OUR ENVIRONMENTAL PROMISE</div>
+        <h2 class="section-title" style="color: var(--secondary);">SUSTAINABLE LUXURY METRICS</h2>
+        <p style="color: rgba(250,248,245,0.7);">Transparent numbers reflecting our commitment to responsible high fashion.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+        
+        <div class="eco-metric-card">
+          <div style="font-family: var(--font-display); font-size: 3.4rem; color: var(--accent); font-weight: 700; line-height: 1; margin-bottom: 0.6rem;">100%</div>
+          <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--secondary); font-weight: 600; margin-bottom: 0.5rem;">ORGANIC & TRACEABLE</div>
+          <p style="font-size: 0.88rem; color: rgba(250,248,245,0.68); line-height: 1.6;">Every yarn of cotton, wool, and silk can be traced to certified ethical farms.</p>
+        </div>
+
+        <div class="eco-metric-card">
+          <div style="font-family: var(--font-display); font-size: 3.4rem; color: var(--accent); font-weight: 700; line-height: 1; margin-bottom: 0.6rem;">0%</div>
+          <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--secondary); font-weight: 600; margin-bottom: 0.5rem;">HARMFUL DYES</div>
+          <p style="font-size: 0.88rem; color: rgba(250,248,245,0.68); line-height: 1.6;">Colored exclusively with botanical pigments and closed-loop water treatment filtration.</p>
+        </div>
+
+        <div class="eco-metric-card">
+          <div style="font-family: var(--font-display); font-size: 3.4rem; color: var(--accent); font-weight: 700; line-height: 1; margin-bottom: 0.6rem;">85%</div>
+          <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--secondary); font-weight: 600; margin-bottom: 0.5rem;">REDUCED CARBON</div>
+          <p style="font-size: 0.88rem; color: rgba(250,248,245,0.68); line-height: 1.6;">Regional atelier production reduces transcontinental shipping carbon footprint drastically.</p>
+        </div>
+
+        <div class="eco-metric-card">
+          <div style="font-family: var(--font-display); font-size: 3.4rem; color: var(--accent); font-weight: 700; line-height: 1; margin-bottom: 0.6rem;">100%</div>
+          <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--secondary); font-weight: 600; margin-bottom: 0.5rem;">RECYCLABLE PACKAGING</div>
+          <p style="font-size: 0.88rem; color: rgba(250,248,245,0.68); line-height: 1.6;">Biodegradable garment bags and FSC-certified gold embossed keepsake boxes.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN PROCESS & SHOPPING JOURNEY -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">THE CUSTOMER EXPERIENCE</div>
+        <h2 class="section-title">YOUR SHOPPING JOURNEY</h2>
+      </div>
+
+      <div class="journey-timeline">
+        <div class="journey-step">
+          <div class="step-num">01</div>
+          <div class="step-title">DISCOVER</div>
+        </div>
+        <div class="journey-step">
+          <div class="step-num">02</div>
+          <div class="step-title">EXPLORE</div>
+        </div>
+        <div class="journey-step">
+          <div class="step-num">03</div>
+          <div class="step-title">SELECT</div>
+        </div>
+        <div class="journey-step">
+          <div class="step-num">04</div>
+          <div class="step-title">ORDER</div>
+        </div>
+        <div class="journey-step">
+          <div class="step-num">05</div>
+          <div class="step-title">DELIVER</div>
+        </div>
+        <div class="journey-step">
+          <div class="step-num">06</div>
+          <div class="step-title">WEAR</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: HERITAGE TIMELINE & MILESTONES -->
+  <section class="section-padding" style="background-color: var(--secondary);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">OUR CHRONICLE</div>
+        <h2 class="section-title">THE HERITAGE TIMELINE</h2>
+        <p>Six years of pioneering haute couture silhouettes and global expansion.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.8rem;">
+        
+        <div class="heritage-node">
+          <div class="heritage-year">2020</div>
+          <div style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-dark); font-weight: 700; margin-bottom: 0.4rem;">PARIS FOUNDATION</div>
+          <p style="font-size: 0.88rem; color: rgba(11,12,16,0.72); line-height: 1.6;">Established as an exclusive bespoke tailoring house in the Marais district of Paris.</p>
+        </div>
+
+        <div class="heritage-node">
+          <div class="heritage-year">2022</div>
+          <div style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-dark); font-weight: 700; margin-bottom: 0.4rem;">MILAN RUNWAY DEBUT</div>
+          <p style="font-size: 0.88rem; color: rgba(11,12,16,0.72); line-height: 1.6;">Unveiled our signature Monolith Trench Coat line during Milan Fashion Week to critical acclaim.</p>
+        </div>
+
+        <div class="heritage-node">
+          <div class="heritage-year">2024</div>
+          <div style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-dark); font-weight: 700; margin-bottom: 0.4rem;">ZERO-WASTE ATELIER</div>
+          <p style="font-size: 0.88rem; color: rgba(11,12,16,0.72); line-height: 1.6;">Transitioned 100% of manufacturing to small-batch, zero-deadstock ethical production.</p>
+        </div>
+
+        <div class="heritage-node">
+          <div class="heritage-year">2026</div>
+          <div style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-dark); font-weight: 700; margin-bottom: 0.4rem;">GLOBAL PRIVÉ CLUB</div>
+          <p style="font-size: 0.88rem; color: rgba(11,12,16,0.72); line-height: 1.6;">Expanded flagship boutiques to NYC, Tokyo & Milan while launching the STACKLY Privé Concierge.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: GLOBAL ATELIER LOCATIONS & FLAGSHIP BOUTIQUES -->
+  <section class="section-padding" style="background-color: #F1ECE1; border-top: 1px solid var(--border-dark);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">VISIT OUR ATELIERS</div>
+        <h2 class="section-title">GLOBAL FLAGSHIP BOUTIQUES</h2>
+        <p>Immerse yourself in our sensory high-fashion spaces across key fashion capitals.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+        
+        <!-- Location 1 -->
+        <div class="boutique-card">
+          <div class="boutique-img-wrapper">
+            <img src="assets/editorial-1.webp" alt="Paris Flagship Boutique" loading="lazy">
+          </div>
+          <div style="padding: 1.8rem;">
+            <div style="font-size: 0.75rem; color: var(--accent-dark); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem;">FLAGSHIP 01</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--primary); margin-bottom: 0.4rem;">PARIS</h3>
+            <p style="font-size: 0.85rem; color: rgba(11,12,16,0.7); margin-bottom: 1.2rem;">42 Rue Saint-Honoré, 75001 Paris, France</p>
+            <a href="404.html" style="color: var(--accent-dark); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;">BOOK APPOINTMENT </a>
+          </div>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="boutique-card">
+          <div class="boutique-img-wrapper">
+            <img src="assets/editorial-2.webp" alt="New York Soho Atelier" loading="lazy">
+          </div>
+          <div style="padding: 1.8rem;">
+            <div style="font-size: 0.75rem; color: var(--accent-dark); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem;">FLAGSHIP 02</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--primary); margin-bottom: 0.4rem;">NEW YORK</h3>
+            <p style="font-size: 0.85rem; color: rgba(11,12,16,0.7); margin-bottom: 1.2rem;">118 Spring Street, Soho, NY 10012 Tenapoleone</p>
+            <a href="404.html" style="color: var(--accent-dark); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;">BOOK APPOINTMENT </a>
+          </div>
+        </div>
+
+        <!-- Location 3 -->
+        <div class="boutique-card">
+          <div class="boutique-img-wrapper">
+            <img src="assets/hero-fashion.webp" alt="Milan Fashion Boutique" loading="lazy">
+          </div>
+          <div style="padding: 1.8rem;">
+            <div style="font-size: 0.75rem; color: var(--accent-dark); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem;">FLAGSHIP 03</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--primary); margin-bottom: 0.4rem;">MILAN</h3>
+            <p style="font-size: 0.85rem; color: rgba(11,12,16,0.7); margin-bottom: 1.2rem;">Via Montenapoleone 14, 20121 Milano, Italy</p>
+            <a href="404.html" style="color: var(--accent-dark); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;">BOOK APPOINTMENT </a>
+          </div>
+        </div>
+
+        <!-- Location 4 -->
+        <div class="boutique-card">
+          <div class="boutique-img-wrapper">
+            <img src="assets/about-hero.webp" alt="Tokyo Ginza Atelier" loading="lazy">
+          </div>
+          <div style="padding: 1.8rem;">
+            <div style="font-size: 0.75rem; color: var(--accent-dark); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.3rem;">FLAGSHIP 04</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--primary); margin-bottom: 0.4rem;">TOKYO</h3>
+            <p style="font-size: 0.85rem; color: rgba(11,12,16,0.7); margin-bottom: 1.2rem;">6-7-1 Ginza, Chuo-ku, Tokyo 104-0061</p>
+            <a href="404.html" style="color: var(--accent-dark); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;">BOOK APPOINTMENT </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background-color: var(--primary); color: var(--secondary); padding: 8rem 2rem; text-align: center;">
+    <div class="container" style="max-width: 800px;">
+      <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem;">WEAR WHAT DEFINES YOU.</h2>
+      <a href="404.html" class="btn-accent">EXPLORE OUR COLLECTION</a>
+    </div>
+  </section>
+
+  <!-- Common Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html"><img src="assets/logo01.webp" alt="STACKLY Logo"></a>
+        <p>Designed for those who define their own style.</p>
+        <div class="social-icons">
+          <a href="404.html" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="social-link"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+          <a href="404.html" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">QUICK LINKS</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Collections.html">Collections</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">FASHION</div>
+        <ul class="footer-links">
+          <li><a href="404.html">New Arrivals</a></li>
+          <li><a href="404.html">Best Sellers</a></li>
+          <li><a href="404.html">Trending</a></li>
+          <li><a href="404.html">Limited Edition</a></li>
+          <li><a href="404.html">Sale</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">CUSTOMER</div>
+        <ul class="footer-links">
+          <li><a href="404.html">Size Guide</a></li>
+          <li><a href="404.html">Shipping</a></li>
+          <li><a href="404.html">Returns</a></li>
+          <li><a href="404.html">Privacy</a></li>
+          <li><a href="404.html">Terms</a></li>
+          <li><a href="404.html">Help Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 STACKLY FASHION. ALL RIGHTS RESERVED.</div>
+      <div>SALEM • PARIS • NEW YORK • MILAN</div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

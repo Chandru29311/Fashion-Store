@@ -1,0 +1,351 @@
+/* Collections Page — Avant-Garde Luxury Styles */
+.collections-hero {
+  background: linear-gradient(180deg, #0B0C10 0%, #14161D 100%);
+  color: var(--secondary);
+  padding: 9rem 2rem 5.5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-accent);
+  position: relative;
+}
+
+.collections-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 2px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.collections-hero h1 {
+  font-size: 4rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.collections-grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 5.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem;
+}
+
+.collection-card {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background-color: var(--bg-dark-card);
+  border: 1.5px solid rgba(201, 160, 80, 0.4);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(201, 160, 80, 0.15);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  display: block;
+}
+
+.collection-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(229, 193, 117, 0.28), transparent);
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 4;
+  transition: left 0.75s ease;
+}
+
+.collection-card:hover {
+  border-color: #E5C175;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85), 0 0 32px rgba(201, 160, 80, 0.45), inset 0 0 20px rgba(201, 160, 80, 0.25);
+}
+
+.collection-card:hover::after {
+  left: 150%;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.collection-card:hover img {
+  transform: scale(1.1);
+  opacity: 0.95;
+}
+
+.collection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.92) 0%, rgba(11, 12, 16, 0.25) 60%, transparent 100%);
+  color: var(--secondary);
+}
+
+.collection-number {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(201, 160, 80, 0.5);
+}
+
+.collection-title {
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.04em;
+}
+
+.collection-desc {
+  font-size: 0.98rem;
+  color: rgba(250, 248, 245, 0.82);
+  max-width: 440px;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   4 NEW SECTIONS FOR COLLECTIONS PAGE
+   ========================================================================== */
+
+/* --- SECTION 1: CRAFTSMANSHIP & FABRIC MASTERCLASS --- */
+.craftsmanship-section {
+  padding: 6rem 0;
+  background-color: #0B0C10;
+  color: var(--secondary);
+  border-top: 1px solid var(--border-accent);
+}
+
+.craftsmanship-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+.fabric-tab-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.fabric-tab-item {
+  background: #14161D;
+  border: 1px solid rgba(250, 248, 245, 0.1);
+  border-left: 3px solid transparent;
+  padding: 1.6rem 2rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.fabric-tab-item:hover, .fabric-tab-item.active {
+  background: rgba(201, 160, 80, 0.08);
+  border-color: rgba(250, 248, 245, 0.1);
+  border-left-color: var(--accent);
+}
+
+.fabric-tab-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-bottom: 0.4rem;
+}
+
+.fabric-tab-item.active .fabric-tab-title {
+  color: var(--accent);
+}
+
+.fabric-preview-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-accent);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 4/3;
+}
+
+.fabric-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.fabric-preview-card:hover img {
+  transform: scale(1.06);
+}
+
+.fabric-badge-overlay {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  background: rgba(11, 12, 16, 0.88);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(201, 160, 80, 0.3);
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- SECTION 2: RUNWAY SPOTLIGHT & CAMPAIGN LOOKBOOK --- */
+.runway-spotlight-section {
+  padding: 7rem 0;
+  background: linear-gradient(180deg, #14161D 0%, #0B0C10 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.runway-campaign-box {
+  background: rgba(250, 248, 245, 0.04);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 4.5rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.play-button-ring {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 25px rgba(201, 160, 80, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.play-button-ring::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  animation: ringRipple 2s infinite;
+}
+
+@keyframes ringRipple {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+.play-button-ring:hover {
+  transform: scale(1.1);
+}
+
+/* --- SECTION 3: INTERACTIVE STYLE MATRIX & FINDER --- */
+.style-matrix-section {
+  padding: 6rem 0;
+  background-color: var(--bg-light);
+  color: var(--primary);
+}
+
+.style-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+  margin-top: 3.5rem;
+}
+
+.style-matrix-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.style-matrix-card:hover, .style-matrix-card.active {
+  border-color: var(--accent-dark);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  background: #FAF8F5;
+}
+
+.style-matrix-icon {
+  font-size: 2rem;
+  color: var(--accent-dark);
+  margin-bottom: 1.2rem;
+}
+
+/* --- SECTION 4: PRIVATE VAULT RESERVATION BANNER --- */
+.private-vault-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #0B0C10 0%, #161822 100%);
+  color: var(--secondary);
+  border-top: 1px solid var(--border-accent);
+}
+
+.vault-card {
+  background: #12141C;
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .craftsmanship-grid, .runway-campaign-box, .vault-card {
+    grid-template-columns: 1fr;
+  }
+  .style-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .runway-campaign-box, .vault-card {
+    padding: 2rem 1.5rem;
+  }
+  .style-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+}

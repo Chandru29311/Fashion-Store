@@ -1,0 +1,245 @@
+/* Client Dashboard — Modern Cyber-Luxe Specific Styles */
+.tracking-timeline-box {
+  background-color: #161822;
+  border: 1px solid rgba(250, 248, 245, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2.8rem 2.2rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tracking-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 2.2rem;
+}
+
+.tracking-timeline::before {
+  content: '';
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(250, 248, 245, 0.15);
+  z-index: 1;
+}
+
+.tracking-progress-line {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 75%;
+  height: 2px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 10px var(--accent);
+  z-index: 2;
+  transition: width 1s ease;
+}
+
+.tracking-step {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  background: #161822;
+  padding: 0 0.6rem;
+}
+
+.step-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0B0C10;
+  border: 2px solid rgba(250, 248, 245, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: rgba(250, 248, 245, 0.5);
+  transition: var(--transition);
+}
+
+.tracking-step.completed .step-dot {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: var(--primary);
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(201, 160, 80, 0.6);
+}
+
+.tracking-step.active .step-dot {
+  background: var(--primary);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(201, 160, 80, 0.35);
+}
+
+.step-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(250, 248, 245, 0.6);
+}
+
+.tracking-step.completed .step-label,
+.tracking-step.active .step-label {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.wishlist-grid-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .tracking-timeline-box {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .tracking-timeline {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+  
+  .tracking-timeline::before {
+    display: block;
+    top: 18px;
+    bottom: 18px;
+    left: 17px;
+    width: 2px;
+    height: calc(100% - 36px);
+  }
+
+  .tracking-progress-line {
+    display: block;
+    top: 18px;
+    left: 17px;
+    width: 2px;
+    height: calc((100% - 36px) * 0.75);
+  }
+
+  .tracking-step {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+  }
+
+  .step-dot {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 3;
+  }
+
+  .step-label {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+  
+  .wishlist-grid-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Concierge Chat Window */
+.chat-window-box {
+  background: #12141C;
+  border: 1px solid rgba(250, 248, 245, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 1.2rem 1.6rem;
+  background: #161822;
+  border-bottom: 1px solid rgba(250, 248, 245, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chat-messages-area {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.chat-bubble.stylist {
+  background: #1A1C26;
+  color: var(--secondary);
+  border-left: 3px solid var(--accent);
+  align-self: flex-start;
+}
+
+.chat-bubble.client {
+  background: var(--accent-gradient);
+  color: var(--primary);
+  font-weight: 600;
+  align-self: flex-end;
+}
+
+.chat-input-row {
+  padding: 1rem 1.5rem;
+  background: #161822;
+  border-top: 1px solid rgba(250, 248, 245, 0.1);
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* Settings Grid & Cards */
+.settings-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.settings-card {
+  background: #161822;
+  border: 1px solid rgba(250, 248, 245, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(250, 248, 245, 0.08);
+}
+
+.toggle-switch-row:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .settings-grid-container {
+    grid-template-columns: 1fr;
+  }
+}

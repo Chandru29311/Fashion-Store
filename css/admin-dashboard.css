@@ -1,0 +1,177 @@
+/* Admin Dashboard — Modern Cyber-Luxe Specific Styles */
+.analytics-chart-box {
+  background-color: #161822;
+  border: 1px solid rgba(250, 248, 245, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.chart-controls {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.chart-btn {
+  background: #0B0C10;
+  border: 1px solid rgba(250, 248, 245, 0.2);
+  color: rgba(250, 248, 245, 0.7);
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.chart-btn.active, .chart-btn:hover {
+  background: var(--accent-gradient);
+  color: var(--primary);
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(201, 160, 80, 0.4);
+}
+
+.svg-chart-container {
+  width: 100%;
+  height: 270px;
+  margin-top: 1.8rem;
+}
+
+.svg-chart-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.top-products-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.top-product-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.95rem;
+  background-color: #0B0C10;
+  border: 1px solid rgba(250, 248, 245, 0.08);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.top-product-item:hover {
+  border-color: var(--border-accent);
+  transform: translateX(4px);
+}
+
+.top-product-rank {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent);
+  width: 32px;
+  font-weight: 700;
+}
+
+.top-product-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.top-product-info {
+  flex: 1;
+}
+
+.top-product-name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.top-product-sales {
+  font-size: 0.82rem;
+  color: rgba(250, 248, 245, 0.5);
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.notification-card {
+  padding: 1.1rem 1.4rem;
+  background-color: #0B0C10;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+.notification-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--secondary);
+}
+
+.notification-desc {
+  font-size: 0.82rem;
+  color: rgba(250, 248, 245, 0.65);
+}
+
+/* Admin Settings & Customer Grid Enhancements */
+.settings-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+}
+
+.settings-card {
+  background-color: #161822;
+  border: 1px solid rgba(250, 248, 245, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(250, 248, 245, 0.08);
+}
+
+.toggle-switch-row:last-child {
+  border-bottom: none;
+}
+
+.admin-badge-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  background: rgba(201, 160, 80, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(201, 160, 80, 0.4);
+}
+
+.concierge-request-card {
+  background: #0B0C10;
+  border: 1px solid rgba(250, 248, 245, 0.08);
+  border-left: 3px solid var(--accent);
+  padding: 1.2rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .settings-grid-container {
+    grid-template-columns: 1fr;
+  }
+}

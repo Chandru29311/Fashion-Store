@@ -1,0 +1,549 @@
+/* Shop Page — Modern Avant-Garde Luxury Styles */
+.shop-hero {
+  background: linear-gradient(180deg, #0B0C10 0%, #14161D 100%);
+  color: var(--secondary);
+  padding: 9rem 2rem 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-accent);
+}
+
+.shop-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 2px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.shop-hero h1 {
+  font-size: 3.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.shop-hero p {
+  color: rgba(250, 248, 245, 0.75);
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.shop-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 3.5rem;
+}
+
+.filter-sidebar {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  height: fit-content;
+  position: sticky;
+  top: 110px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.filter-sidebar:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.filter-section {
+  margin-bottom: 2.2rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.filter-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+  color: var(--primary);
+  transition: var(--transition-fast);
+}
+
+.filter-checkbox:hover {
+  color: var(--accent-dark);
+  transform: translateX(3px);
+}
+
+.filter-checkbox input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.color-options-grid {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.color-option {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: var(--transition-fast);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.color-option.selected, .color-option:hover {
+  border-color: var(--accent);
+  transform: scale(1.18);
+  box-shadow: 0 0 10px rgba(201, 160, 80, 0.5);
+}
+
+.size-options-grid {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.size-btn {
+  background: var(--secondary);
+  border: 1px solid var(--border-dark);
+  padding: 0.45rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.size-btn.selected, .size-btn:hover {
+  background: var(--primary);
+  color: var(--secondary);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(201, 160, 80, 0.3);
+}
+
+.shop-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.shop-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.results-count {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.sort-select {
+  padding: 0.65rem 1.4rem;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-sm);
+  background: var(--secondary);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.sort-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201, 160, 80, 0.2);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .shop-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-sidebar {
+    position: static;
+    display: none;
+  }
+  
+  .filter-sidebar.active {
+    display: block;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ==========================================================================
+   4 NEW SECTIONS FOR SHOP PAGE
+   ========================================================================== */
+
+/* SECTION 1: ARCHETYPE GRID */
+.shop-archetype-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.shop-archetype-card {
+  background: #14161D;
+  border: 1.5px solid rgba(201, 160, 80, 0.3);
+  border-radius: var(--radius-md);
+  padding: 2.2rem 1.8rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-archetype-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-gradient);
+  opacity: 0.4;
+  transition: opacity 0.4s ease, height 0.4s ease;
+}
+
+.shop-archetype-card:hover {
+  background: #1A1C26;
+  border-color: #E5C175;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(201, 160, 80, 0.3);
+}
+
+.shop-archetype-card:hover::before {
+  opacity: 1;
+  height: 4px;
+}
+
+.archetype-badge {
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.archetype-icon {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.shop-archetype-card:hover .archetype-icon {
+  transform: scale(1.15) translateY(-2px);
+  color: #E5C175;
+}
+
+.shop-archetype-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+  transition: color 0.4s ease;
+}
+
+.shop-archetype-card:hover h3 {
+  color: #E5C175;
+}
+
+.shop-archetype-card p {
+  font-size: 0.88rem;
+  color: rgba(250, 248, 245, 0.72);
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  flex: 1;
+}
+
+.archetype-link {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  transition: transform 0.3s ease;
+}
+
+.shop-archetype-card:hover .archetype-link {
+  transform: translateX(4px);
+  color: #E5C175;
+}
+
+/* SECTION 2: VAULT BANNER & COUNTDOWN */
+.shop-vault-banner {
+  background: rgba(250, 248, 245, 0.03);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.shop-countdown-box {
+  background: #0B0C10;
+  border: 1px solid rgba(201, 160, 80, 0.4);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6), inset 0 0 20px rgba(201, 160, 80, 0.1);
+}
+
+.shop-timer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.timer-unit {
+  background: rgba(245, 242, 234, 0.05);
+  border: 1px solid rgba(201, 160, 80, 0.2);
+  padding: 1rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.timer-number {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+@keyframes timerTickPulse {
+  0% {
+    transform: scale(1);
+    color: var(--accent);
+  }
+  35% {
+    transform: scale(1.18) translateY(-2px);
+    color: #FFFFFF;
+    text-shadow: 0 0 16px rgba(201, 160, 80, 0.9), 0 0 25px rgba(201, 160, 80, 0.5);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    color: var(--accent);
+  }
+}
+
+.timer-number.tick-anim {
+  animation: timerTickPulse 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.timer-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: rgba(250, 248, 245, 0.6);
+}
+
+/* SECTION 3: GUARANTEE GRID */
+.shop-guarantee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.shop-guarantee-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.shop-guarantee-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-gradient);
+  opacity: 0.3;
+  transition: opacity 0.4s ease, height 0.4s ease;
+}
+
+.shop-guarantee-card:hover {
+  border-color: var(--accent-dark);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  background: #FAF8F5;
+}
+
+.shop-guarantee-card:hover::before {
+  opacity: 1;
+  height: 4px;
+}
+
+.guarantee-icon {
+  font-size: 2.2rem;
+  color: var(--accent-dark);
+  margin-bottom: 1.2rem;
+  transition: transform 0.4s ease;
+}
+
+.shop-guarantee-card:hover .guarantee-icon {
+  transform: scale(1.15) translateY(-2px);
+}
+
+.shop-guarantee-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.shop-guarantee-card p {
+  font-size: 0.9rem;
+  color: rgba(17, 17, 17, 0.72);
+  line-height: 1.65;
+}
+
+/* SECTION 4: LOOKBOOK GRID */
+.shop-lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.shop-lookbook-card {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.shop-lookbook-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shop-lookbook-card:hover img {
+  transform: scale(1.08);
+}
+
+.lookbook-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.2rem 1.8rem;
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.95) 0%, rgba(11, 12, 16, 0.2) 75%, transparent 100%);
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.lookbook-tag {
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.lookbook-overlay h4 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin: 0;
+}
+
+/* RESPONSIVE FOR NEW SHOP SECTIONS */
+@media (max-width: 1024px) {
+  .shop-archetype-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop-vault-banner {
+    grid-template-columns: 1fr;
+    padding: 2.5rem;
+  }
+  .shop-lookbook-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-archetype-grid,
+  .shop-guarantee-grid,
+  .shop-lookbook-grid {
+    grid-template-columns: 1fr;
+  }
+  .shop-timer-grid {
+    gap: 0.5rem;
+  }
+  .timer-number {
+    font-size: 1.6rem;
+  }
+}

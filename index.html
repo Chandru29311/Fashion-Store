@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STACKLY — Contemporary Luxury Fashion</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-logo">STACKLY</div>
+    <div class="preloader-bar">
+      <div class="preloader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Site Header / Navbar -->
+  <header class="site-header">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo01.webp" alt="STACKLY Luxury Fashion Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="Shop.html" class="nav-link">Shop</a></li>
+        <li><a href="Collections.html" class="nav-link">Collections</a></li>
+        <li><a href="About.html" class="nav-link">About</a></li>
+        <li><a href="Contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <a href="Login.html" class="login-nav-btn">Login</a>
+        <button class="icon-btn cart-icon-btn" aria-label="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge cart-count-badge">0</span>
+        </button>
+        <button class="hamburger-btn" aria-label="Toggle Navigation Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Menu -->
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <button class="mobile-menu-close" aria-label="Close Menu">✕</button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+      <li><a href="Collections.html">Collections</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="Login.html" class="btn-accent" style="display: block; text-align: center;">LOGIN / ACCOUNT</a>
+    </div>
+  </div>
+
+  <!-- Cart Slide-Over Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>YOUR CART</h3>
+      <button class="cart-close-btn">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body">
+      <!-- Dynamic cart items rendered by js/cart.js -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal">
+        <span>SUBTOTAL</span>
+        <span id="cart-drawer-total">₹0</span>
+      </div>
+      <a href="404.html" class="btn-primary" style="display: block; text-align: center;">PROCEED TO CHECKOUT</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" style="position: relative; min-height: 100vh; background-color: var(--primary); color: var(--secondary); display: flex; align-items: center; padding: 8rem 2rem 4rem 2rem; overflow: hidden;">
+    <div style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1;">
+      <img src="assets/hero-fashion.webp" alt="STACKLY Luxury Campaign Hero" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.45;">
+      <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(17,17,17,0.9) 0%, rgba(17,17,17,0.4) 100%);"></div>
+    </div>
+    
+    <div class="container hero-content" style="position: relative; z-index: 2; max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center;">
+      <div>
+        <div style="color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.3em; margin-bottom: 1.2rem; font-weight: 600;">NEW SEASON • AUTUMN / WINTER 2026</div>
+        <h1 style="font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.05; margin-bottom: 1.5rem; letter-spacing: -0.02em;">WEAR YOUR<br>OWN STATEMENT.</h1>
+        <p style="font-size: 1.15rem; color: rgba(245,242,234,0.8); max-width: 540px; margin-bottom: 2.5rem; line-height: 1.7;">Contemporary fashion designed for movement, confidence and individuality. Crafted with timeless precision.</p>
+        <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
+          <a href="404.html" class="btn-accent">EXPLORE COLLECTION</a>
+          <a href="404.html" class="btn-outline">SHOP NOW</a>
+        </div>
+      </div>
+      
+      <!-- Floating Info Card -->
+      <div class="gold-frame" style="background: rgba(17,17,17,0.85); backdrop-filter: blur(10px); padding: 2.5rem; border: 1px solid var(--accent);">
+        <div style="font-size: 0.8rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.5rem;">EDITORIAL SELECTION</div>
+        <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 1rem; color: var(--secondary);">AUTUMN / WINTER 2026</h3>
+        <p style="font-size: 0.9rem; color: rgba(245,242,234,0.7); margin-bottom: 1.5rem;">Silhouettes engineered for modern urban landscapes. Discover our signature limited drops.</p>
+        <a href="404.html" style="color: var(--accent); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; display: flex; align-items: center; gap: 0.5rem;">DISCOVER THE COLLECTION →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">SEASONAL HIGHLIGHTS</div>
+        <h2 class="section-title">NEW ARRIVALS</h2>
+        <p>Pieces designed for the season ahead.</p>
+      </div>
+      
+      <div class="grid-4-col products-grid" id="index-new-arrivals-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+        
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-card-image">
+            <span class="product-badge">NEW</span>
+            <button class="wishlist-toggle-btn" data-product-id="1" onclick="handleWishlistClick(event, 1)" aria-label="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/product-1.webp" alt="STACKLY Urban Runner 01" loading="lazy">
+            <button class="quick-add-btn" onclick="addToCart({id: 1, title: 'STACKLY Urban Runner 01', price: 5999, image: 'assets/product-1.webp'})">+ QUICK ADD</button>
+          </div>
+          <div class="product-card-content">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="product-category">URBAN</span>
+              <span class="product-rating">★★★★★ (5.0)</span>
+            </div>
+            <a href="Product.html?id=1" class="product-title">STACKLY Urban Runner 01</a>
+            <div class="product-price">₹5,999</div>
+            <div class="color-dots">
+              <span class="color-dot" style="background-color: #0B0C10;" title="Obsidian Black"></span>
+              <span class="color-dot" style="background-color: #FAF8F5;" title="Silk Pearl"></span>
+              <span class="color-dot" style="background-color: #C9A050;" title="Champagne Gold"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-card-image">
+            <span class="product-badge">HOT</span>
+            <button class="wishlist-toggle-btn" data-product-id="2" onclick="handleWishlistClick(event, 2)" aria-label="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/product-2.webp" alt="Street Classic Oversized Hoodie" loading="lazy">
+            <button class="quick-add-btn" onclick="addToCart({id: 2, title: 'Street Classic Oversized Hoodie', price: 4299, image: 'assets/product-2.webp'})">+ QUICK ADD</button>
+          </div>
+          <div class="product-card-content">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="product-category">STREET</span>
+              <span class="product-rating">★★★★★ (5.0)</span>
+            </div>
+            <a href="Product.html?id=2" class="product-title">Street Classic Oversized Hoodie</a>
+            <div class="product-price">₹4,299</div>
+            <div class="color-dots">
+              <span class="color-dot" style="background-color: #0B0C10;" title="Obsidian Black"></span>
+              <span class="color-dot" style="background-color: #C9A050;" title="Champagne Gold"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-card-image">
+            <span class="product-badge">TRENDING</span>
+            <button class="wishlist-toggle-btn" data-product-id="3" onclick="handleWishlistClick(event, 3)" aria-label="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/product-3.webp" alt="Air Flex Motion Jacket" loading="lazy">
+            <button class="quick-add-btn" onclick="addToCart({id: 3, title: 'Air Flex Motion Jacket', price: 6999, image: 'assets/product-3.webp'})">+ QUICK ADD</button>
+          </div>
+          <div class="product-card-content">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="product-category">PERFORMANCE</span>
+              <span class="product-rating">★★★★★ (4.8)</span>
+            </div>
+            <a href="Product.html?id=3" class="product-title">Air Flex Motion leather Jacket coat </a>
+            <div class="product-price">₹6,999</div>
+            <div class="color-dots">
+              <span class="color-dot" style="background-color: #0B0C10;" title="Obsidian Black"></span>
+              <span class="color-dot" style="background-color: #FAF8F5;" title="Silk Pearl"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-card-image">
+            <span class="product-badge">EXCLUSIVE</span>
+            <button class="wishlist-toggle-btn" data-product-id="7" onclick="handleWishlistClick(event, 7)" aria-label="Add to Wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="assets/product-7.webp" alt="Limited Monolith Trench Coat" loading="lazy">
+            <button class="quick-add-btn" onclick="addToCart({id: 7, title: 'Limited Monolith Trench Coat', price: 12999, image: 'assets/product-7.webp'})">+ QUICK ADD</button>
+          </div>
+          <div class="product-card-content">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="product-category">LIMITED EDITION</span>
+              <span class="product-rating">★★★★★ (5.0)</span>
+            </div>
+            <a href="Product.html?id=7" class="product-title">Limited Monolith Trench Coat</a>
+            <div class="product-price">₹12,999</div>
+            <div class="color-dots">
+              <span class="color-dot" style="background-color: #0B0C10;" title="Obsidian Black"></span>
+              <span class="color-dot" style="background-color: #C9A050;" title="Champagne Gold"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="404.html" class="btn-primary">VIEW ALL NEW ARRIVALS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL FASHION SECTION -->
+  <section class="section-padding" style="background-color: var(--primary); color: var(--secondary); overflow: hidden;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+      <div style="position: relative;">
+        <img src="assets/editorial-1.webp" alt="Editorial Fashion Campaign" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 1px solid var(--accent);" loading="lazy">
+        <div style="position: absolute; bottom: -2rem; right: -2rem; width: 50%; border: 1px solid var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+          <img src="assets/editorial-2.webp" alt="Supporting Fashion Detail" style="width: 100%; aspect-ratio: 1/1; object-fit: cover;" loading="lazy">
+        </div>
+      </div>
+      
+      <div>
+        <div style="color: var(--accent); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; font-weight: 600;">BRAND PHILOSOPHY</div>
+        <h2 style="font-size: clamp(2.5rem, 4vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem;">LESS TREND.<br>MORE IDENTITY.</h2>
+        <p style="color: rgba(245,242,234,0.75); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+          We reject fast trends in favor of enduring silhouettes. Each piece is architectural, minimal, and constructed from carefully chosen luxury textiles to ensure you wear your own statement everywhere.
+        </p>
+        <a href="404.html" class="btn-accent">EXPLORE OUR STORY</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: INTERACTIVE RUNWAY & EDITORIAL LOOKBOOK -->
+  <!-- <section class="section-padding" style="background-color: var(--secondary);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">HAUTE COUTURE 2026</div>
+        <h2 class="section-title">THE RUNWAY SPOTLIGHT</h2>
+        <p>Architectural cuts meets contemporary fluid motion.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem; align-items: stretch;">
+        <!-- Featured Main Runway Card -->
+        <!-- <div class="runway-showcase-card" style="aspect-ratio: 16/10;">
+          <img src="assets/runway-look-1.webp" alt="High Fashion Runway Look 01" loading="lazy">
+          <div class="runway-content-overlay">
+            <div style="font-size: 0.8rem; color: var(--accent); letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem;">PARIS FASHION WEEK EDITION</div>
+            <h3 style="font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 0.8rem; color: var(--secondary);">OBSIDIAN SILHOUETTE NO. 4</h3>
+            <p style="font-size: 0.95rem; color: rgba(250,248,245,0.8); max-width: 500px; margin-bottom: 1.5rem; line-height: 1.6;">Engineered with structured shoulder contours and weighted silk drape to command presence in any room.</p>
+            <a href="Shop.html" class="btn-accent">EXPLORE RUNWAY PIECES</a>
+          </div>
+        </div> -->
+
+        <!-- Secondary Side Runway Cards Grid -->
+        <!-- <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+          <div class="runway-showcase-card" style="flex: 1; min-height: 220px;">
+            <img src="assets/runway-look-2.webp" alt="High Fashion Runway Look 02" loading="lazy">
+            <div class="runway-content-overlay" style="padding: 1.5rem;">
+              <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">CAPSULE DROP 02</div>
+              <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--secondary); margin-top: 0.2rem;">THE MONOLITH OVERCOAT</h4>
+            </div>
+          </div>
+          <div class="runway-showcase-card" style="flex: 1; min-height: 220px;">
+            <img src="assets/runway-look-3.webp" alt="High Fashion Runway Look 03" loading="lazy">
+            <div class="runway-content-overlay" style="padding: 1.5rem;">
+              <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">TAILORED STRUCTURE</div>
+              <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--secondary); margin-top: 0.2rem;">AVANT-GARDE EVENING SUIT</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section> 
+
+  <!-- FEATURED COLLECTIONS -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">CURATED CATEGORIES</div>
+        <h2 class="section-title">COLLECTIONS THAT DEFINE THE SEASON</h2>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        <a href="Collections.html" class="collection-card">
+          <img src="assets/urban.webp" alt="URBAN Collection" loading="lazy">
+          <div class="collection-overlay">
+            <div class="collection-number">01</div>
+            <div class="collection-title">URBAN</div>
+            <div class="collection-desc">Modern everyday fashion for high-velocity lifestyles.</div>
+          </div>
+        </a>
+        <a href="Collections.html" class="collection-card">
+          <img src="assets/street.webp" alt="STREET Collection" loading="lazy">
+          <div class="collection-overlay">
+            <div class="collection-number">02</div>
+            <div class="collection-title">STREET</div>
+            <div class="collection-desc">Bold street-inspired silhouettes with sharp tailoring.</div>
+          </div>
+        </a>
+        <a href="Collections.html" class="collection-card">
+          <img src="assets/essentials.webp" alt="ESSENTIALS Collection" loading="lazy">
+          <div class="collection-overlay">
+            <div class="collection-number">03</div>
+            <div class="collection-title">ESSENTIALS</div>
+            <div class="collection-desc">Minimal wardrobe staples built for longevity.</div>
+          </div>
+        </a>
+        <a href="Collections.html" class="collection-card">
+          <img src="assets/performance.webp" alt="PERFORMANCE Collection" loading="lazy">
+          <div class="collection-overlay">
+            <div class="collection-number">04</div>
+            <div class="collection-title">PERFORMANCE</div>
+            <div class="collection-desc">Fashion engineered for unrestricted movement.</div>
+          </div>
+        </a>
+        <a href="Collections.html" class="collection-card">
+          <img src="assets/classic.webp" alt="CLASSIC Collection" loading="lazy">
+          <div class="collection-overlay">
+            <div class="collection-number">05</div>
+            <div class="collection-title">CLASSIC</div>
+            <div class="collection-desc">Timeless tailoring and tailored luxury cuts.</div>
+          </div>
+        </a>
+        <a href="Collections.html" class="collection-card">
+          <img src="assets/limited.webp" alt="LIMITED EDITION Collection" loading="lazy">
+          <div class="collection-overlay">
+            <div class="collection-number">06</div>
+            <div class="collection-title">LIMITED EDITION</div>
+            <div class="collection-desc">Exclusive seasonal drops crafted in small quantities.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CRAFT & SUSTAINABILITY ATELIER -->
+  <section class="section-padding" style="background-color: var(--primary); color: var(--secondary); position: relative; overflow: hidden;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">THE ATELIER PROCESS</div>
+        <h2 class="section-title" style="color: var(--secondary);">UNCOMPROMISING CRAFTSMANSHIP</h2>
+        <p style="color: rgba(250,248,245,0.7);">From sustainable thread selection to final sartorial inspection.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+        
+        <!-- Step 1 -->
+        <div class="craft-atelier-card">
+          <div class="craft-icon-wrapper">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem;">PHASE 01</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.8rem; color: var(--secondary);">ORGANIC LUXURY SILK & WOOL</h3>
+          <p style="font-size: 0.88rem; color: rgba(250,248,245,0.72); line-height: 1.6;">100% ethically sourced raw organic fibers spun in historical Italian textile mills.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="craft-atelier-card">
+          <div class="craft-icon-wrapper">
+            <i class="fa-solid fa-scissors"></i>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem;">PHASE 02</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.8rem; color: var(--secondary);">ARCHITECTURAL PRECISION CUT</h3>
+          <p style="font-size: 0.88rem; color: rgba(250,248,245,0.72); line-height: 1.6;">Precision laser patterns combined with master hand-tailoring for flawless posture.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="craft-atelier-card">
+          <div class="craft-icon-wrapper">
+            <i class="fa-solid fa-recycle"></i>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem;">PHASE 03</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.8rem; color: var(--secondary);">ZERO-WASTE PRODUCTION</h3>
+          <p style="font-size: 0.88rem; color: rgba(250,248,245,0.72); line-height: 1.6;">Small batch capsule runs engineered to completely eliminate deadstock landfill waste.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="craft-atelier-card">
+          <div class="craft-icon-wrapper">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem;">PHASE 04</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.8rem; color: var(--secondary);">HAND-FINISHED GOLD CERTIFICATE</h3>
+          <p style="font-size: 0.88rem; color: rgba(250,248,245,0.72); line-height: 1.6;">Each garment is individually numbered and accompanied by an authentic digital token.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FASHION STATISTICS -->
+  <section class="section-padding" style="background-color: var(--primary); color: var(--secondary); border-top: 1px solid var(--border-accent); border-bottom: 1px solid var(--border-accent);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; text-align: center;">
+      <div>
+        <div class="stat-number" data-target="25" data-suffix="K+" style="font-family: var(--font-display); font-size: 3.5rem; color: var(--accent); font-weight: 700;">0K+</div>
+        <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(245,242,234,0.7);">ORDERS DELIVERED</div>
+      </div>
+      <div>
+        <div class="stat-number" data-target="120" data-suffix="+" style="font-family: var(--font-display); font-size: 3.5rem; color: var(--accent); font-weight: 700;">0+</div>
+        <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(245,242,234,0.7);">DESIGNER PIECES</div>
+      </div>
+      <div>
+        <div class="stat-number" data-target="18" data-suffix="" style="font-family: var(--font-display); font-size: 3.5rem; color: var(--accent); font-weight: 700;">0</div>
+        <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(245,242,234,0.7);">COLLECTIONS</div>
+      </div>
+      <div>
+        <div class="stat-number" data-target="96" data-suffix="%" style="font-family: var(--font-display); font-size: 3.5rem; color: var(--accent); font-weight: 700;">0%</div>
+        <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(245,242,234,0.7);">SATISFACTION RATE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY STACKLY -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">THE STACKLY PROMISE</div>
+        <h2 class="section-title">DESIGNED AROUND YOU</h2>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+        <div class="promise-card">
+          <i class="fa-solid fa-gem promise-icon"></i>
+          <h3>Premium Materials</h3>
+          <p>Carefully selected organic and luxury textiles for enduring comfort and longevity.</p>
+        </div>
+        <div class="promise-card">
+          <i class="fa-solid fa-compass-drafting promise-icon"></i>
+          <h3>Modern Design</h3>
+          <p>Contemporary silhouettes inspired by global haute couture and architectural structure.</p>
+        </div>
+        <div class="promise-card">
+          <i class="fa-solid fa-leaf promise-icon"></i>
+          <h3>Responsible Production</h3>
+          <p>Thoughtful small-batch production minimize waste and ensure ethical standards.</p>
+        </div>
+        <div class="promise-card">
+          <i class="fa-solid fa-shield-halved promise-icon"></i>
+          <h3>Secure Shopping</h3>
+          <p>Encrypted client data protection for a smooth, reliable order experience.</p>
+        </div>
+        <div class="promise-card">
+          <i class="fa-solid fa-arrow-rotate-left promise-icon"></i>
+          <h3>Easy Returns</h3>
+          <p>Complimentary 30-day return concierge for effortless fit perfection.</p>
+        </div>
+        <div class="promise-card">
+          <i class="fa-solid fa-layer-group promise-icon"></i>
+          <h3>Curated Collections</h3>
+          <p>Capsule collections built around distinctive styles and seamless layering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE VIP PRIVÉ CLUB & EXCLUSIVE CONCIERGE -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="vip-prive-container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div>
+            <div style="color: var(--accent); font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;">BY INVITATION ONLY</div>
+            <h2 style="font-size: clamp(2.4rem, 4vw, 3.6rem); color: var(--secondary); margin-bottom: 1.2rem; line-height: 1.1;">JOIN THE STACKLY<br><span style="color: var(--accent);">PRIVÉ CLUB</span></h2>
+            <p style="color: rgba(250,248,245,0.78); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+              Unlock priority access to unreleased private capsule drops, bespoke tailoring consultations, and 24/7 personal stylist support.
+            </p>
+            
+            <!-- VIP Pass Newsletter Input -->
+            <form onsubmit="event.preventDefault(); this.reset();" autocomplete="off" style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS" required class="form-control" autocomplete="off" style="flex: 1; min-width: 250px; background: #0B0C10; border-color: rgba(250,248,245,0.2); color: var(--secondary);">
+              <button type="submit" class="btn-accent">REQUEST MEMBERSHIP</button>
+            </form>
+          </div>
+
+          <!-- Benefits Grid -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="vip-benefit-item">
+              <i class="fa-solid fa-crown vip-benefit-icon"></i>
+              <div>
+                <h4 style="font-family: var(--font-display); font-size: 1.3rem; color: var(--secondary); margin-bottom: 0.2rem;">Priority Capsule Access</h4>
+                <p style="font-size: 0.85rem; color: rgba(250,248,245,0.65); margin: 0;">Shop limited drops 48 hours prior to public release.</p>
+              </div>
+            </div>
+
+            <div class="vip-benefit-item">
+              <i class="fa-solid fa-user-tie vip-benefit-icon"></i>
+              <div>
+                <h4 style="font-family: var(--font-display); font-size: 1.3rem; color: var(--secondary); margin-bottom: 0.2rem;">Dedicated Stylist Concierge</h4>
+                <p style="font-size: 0.85rem; color: rgba(250,248,245,0.65); margin: 0;">Direct 1-on-1 virtual or in-atelier wardrobe styling.</p>
+              </div>
+            </div>
+
+            <div class="vip-benefit-item">
+              <i class="fa-solid fa-plane-up vip-benefit-icon"></i>
+              <div>
+                <h4 style="font-family: var(--font-display); font-size: 1.3rem; color: var(--secondary); margin-bottom: 0.2rem;">Complimentary Priority Courier</h4>
+                <p style="font-size: 0.85rem; color: rgba(250,248,245,0.65); margin: 0;">Worldwide express delivery with carbon-offset packaging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STYLE STORIES -->
+  <section class="section-padding" style="background-color: #ECE8DD;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">EDITORIAL FEATURE</div>
+        <h2 class="section-title">STYLE STORIES</h2>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+        <div style="background: var(--secondary); border: 1px solid var(--border-dark); overflow: hidden;">
+          <img src="assets/story1.webp" alt="Arun Style Story" style="width: 100%; aspect-ratio: 4/5; object-fit: cover;" loading="lazy">
+          <div style="padding: 1.8rem;">
+            <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em; font-weight: 600;">URBAN COLLECTION</div>
+            <blockquote style="font-family: var(--font-display); font-size: 1.3rem; margin: 0.8rem 0; line-height: 1.4;">"I wanted something minimal without feeling ordinary. STACKLY nailed the proportion."</blockquote>
+            <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">ARUN — CLIENT</div>
+            <div style="font-size: 0.75rem; color: rgba(17,17,17,0.5);">LOOK: URBAN RUNNER X</div>
+          </div>
+        </div>
+        <div style="background: var(--secondary); border: 1px solid var(--border-dark); overflow: hidden;">
+          <img src="assets/story2.webp" alt="Priya Style Story" style="width: 100%; aspect-ratio: 4/5; object-fit: cover;" loading="lazy">
+          <div style="padding: 1.8rem;">
+            <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em; font-weight: 600;">STREET COLLECTION</div>
+            <blockquote style="font-family: var(--font-display); font-size: 1.3rem; margin: 0.8rem 0; line-height: 1.4;">"The oversized fit is structured so perfectly it elevates my entire wardrobe."</blockquote>
+            <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">PRIYA — CLIENT</div>
+            <div style="font-size: 0.75rem; color: rgba(17,17,17,0.5);">LOOK: STREET CLASSIC</div>
+          </div>
+        </div>
+        <div style="background: var(--secondary); border: 1px solid var(--border-dark); overflow: hidden;">
+          <img src="assets/story3.webp" alt="Vikram Style Story" style="width: 100%; aspect-ratio: 4/5; object-fit: cover;" loading="lazy">
+          <div style="padding: 1.8rem;">
+            <div style="font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em; font-weight: 600;">CLASSIC COLLECTION</div>
+            <blockquote style="font-family: var(--font-display); font-size: 1.3rem; margin: 0.8rem 0; line-height: 1.4;">"Subtle luxury at its finest. The craftsmanship finest speaks for togather itself."</blockquote>
+            <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">VIKRAM — CLIENT</div>
+            <div style="font-size: 0.75rem; color: rgba(17,17,17,0.5);">LOOK: COURT BLAZER</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: GLOBAL STYLE GALLERY (#STACKLYSTYLE) -->
+  <section class="section-padding" style="background-color: var(--secondary);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">GLOBAL COMMUNITY</div>
+        <h2 class="section-title">TAGGED IN #STACKLYSTYLE</h2>
+        <p>See how trendsetters in Tokyo, Paris, New York, and Milan style our iconic silhouettes.</p>
+      </div>
+
+      <div class="social-gallery-grid">
+        
+        <!-- Tile 1 -->
+        <a href="404.html" class="gallery-tile">
+          <img src="assets/style-look-tokyo.webp" alt="Stackly Style Look Tokyo" loading="lazy">
+          <div class="gallery-tile-overlay">
+            <i class="fa-brands fa-instagram gallery-tile-icon"></i>
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">@TOKYO_SATORI</div>
+            <div style="font-size: 0.75rem; color: var(--accent);">LOOK: URBAN RUNNER X</div>
+            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; border-radius: 2px; margin-top: 0.4rem;">SHOP LOOK →</span>
+          </div>
+        </a>
+
+        <!-- Tile 2 -->
+        <a href="404.html" class="gallery-tile">
+          <img src="assets/style-look-paris.webp" alt="Stackly Style Look Paris" loading="lazy">
+          <div class="gallery-tile-overlay">
+            <i class="fa-brands fa-instagram gallery-tile-icon"></i>
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">@ELENA_PARIS</div>
+            <div style="font-size: 0.75rem; color: var(--accent);">LOOK: STREET CLASSIC</div>
+            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; border-radius: 2px; margin-top: 0.4rem;">SHOP LOOK →</span>
+          </div>
+        </a>
+
+        <!-- Tile 3 -->
+        <a href="404.html" class="gallery-tile">
+          <img src="assets/style-look-milan.webp" alt="Stackly Style Look Milan" loading="lazy">
+          <div class="gallery-tile-overlay">
+            <i class="fa-brands fa-instagram gallery-tile-icon"></i>
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">@MARCO_MILANO</div>
+            <div style="font-size: 0.75rem; color: var(--accent);">LOOK: COURT BLAZER</div>
+            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; border-radius: 2px; margin-top: 0.4rem;">SHOP LOOK →</span>
+          </div>
+        </a>
+
+        <!-- Tile 4 -->
+        <a href="404.html" class="gallery-tile">
+          <img src="assets/style-look-nyc.webp" alt="Stackly Style Look NYC" loading="lazy">
+          <div class="gallery-tile-overlay">
+            <i class="fa-brands fa-instagram gallery-tile-icon"></i>
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">@NYC_STATEMENT</div>
+            <div style="font-size: 0.75rem; color: var(--accent);">LOOK: MONOLITH TRENCH</div>
+            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; border-radius: 2px; margin-top: 0.4rem;">SHOP LOOK →</span>
+          </div>
+        </a>
+
+        <!-- Tile 5 -->
+        <a href="404.html" class="gallery-tile">
+          <img src="assets/style-look-london.webp" alt="Stackly Style Look London" loading="lazy">
+          <div class="gallery-tile-overlay">
+            <i class="fa-brands fa-instagram gallery-tile-icon"></i>
+            <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">@LONDON_EDITORIAL</div>
+            <div style="font-size: 0.75rem; color: var(--accent);">LOOK: FLEX JACKET</div>
+            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; border-radius: 2px; margin-top: 0.4rem;">SHOP LOOK →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section-padding">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header">
+        <div class="section-subtitle">HELP & CONCIERGE</div>
+        <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+      </div>
+      
+      <div class="faq-list" style="display: flex; flex-direction: column; gap: 1rem;">
+        <details style="background: rgba(245,242,234,0.8); border: 1px solid var(--border-dark); padding: 1.5rem; cursor: pointer;">
+          <summary style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            How do I choose my size? <i class="fa-solid fa-plus" style="color: var(--accent); font-size: 1rem;"></i>
+          </summary>
+          <p style="margin-top: 1rem; color: rgba(17,17,17,0.7); font-size: 0.95rem;">Our garments feature accurate international sizing. Consult our detailed size guide on each product page for exact shoulder, chest, and length measurements.</p>
+        </details>
+        
+        <details style="background: rgba(245,242,234,0.8); border: 1px solid var(--border-dark); padding: 1.5rem; cursor: pointer;">
+          <summary style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            What payment methods are available? <i class="fa-solid fa-plus" style="color: var(--accent); font-size: 1rem;"></i>
+          </summary>
+          <p style="margin-top: 1rem; color: rgba(17,17,17,0.7); font-size: 0.95rem;">We accept all major credit cards, UPI, Apple Pay, Net Banking, and express checkout options.</p>
+        </details>
+        
+        <details style="background: rgba(245,242,234,0.8); border: 1px solid var(--border-dark); padding: 1.5rem; cursor: pointer;">
+          <summary style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            How long does delivery take? <i class="fa-solid fa-plus" style="color: var(--accent); font-size: 1rem;"></i>
+          </summary>
+          <p style="margin-top: 1rem; color: rgba(17,17,17,0.7); font-size: 0.95rem;">Standard express shipping takes 2-4 business days. Priority overnight concierge delivery is available at checkout.</p>
+        </details>
+
+        <details style="background: rgba(245,242,234,0.8); border: 1px solid var(--border-dark); padding: 1.5rem; cursor: pointer;">
+          <summary style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            Can I return an item? <i class="fa-solid fa-plus" style="color: var(--accent); font-size: 1rem;"></i>
+          </summary>
+          <p style="margin-top: 1rem; color: rgba(17,17,17,0.7); font-size: 0.95rem;">Yes, we offer complimentary 30-day returns for unworn items with original tags intact.</p>
+        </details>
+        
+        <details style="background: rgba(245,242,234,0.8); border: 1px solid var(--border-dark); padding: 1.5rem; cursor: pointer;">
+          <summary style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            How do I track my order? <i class="fa-solid fa-plus" style="color: var(--accent); font-size: 1rem;"></i>
+          </summary>
+          <p style="margin-top: 1rem; color: rgba(17,17,17,0.7); font-size: 0.95rem;">Log into your Client Portal dashboard to view real-time tracking progress from packaging to final delivery.</p>
+        </details>
+
+        <details style="background: rgba(245,242,234,0.8); border: 1px solid var(--border-dark); padding: 1.5rem; cursor: pointer;">
+          <summary style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            Are products authentic? <i class="fa-solid fa-plus" style="color: var(--accent); font-size: 1rem;"></i>
+          </summary>
+          <p style="margin-top: 1rem; color: rgba(17,17,17,0.7); font-size: 0.95rem;">Every STACKLY creation is guaranteed 100% authentic, accompanied by a digital serial certificate.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section style="position: relative; padding: 10rem 2rem; background-color: var(--primary); color: var(--secondary); text-align: center; overflow: hidden;">
+    <img src="assets/cta-fashion.webp" alt="STACKLY Collection Finale" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; opacity: 0.3;" loading="lazy">
+    
+    <div class="container gold-frame" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto; background: rgba(17,17,17,0.85); padding: 4rem 2rem;">
+      <h2 style="font-size: clamp(2.5rem, 5vw, 4.2rem); margin-bottom: 1.5rem; line-height: 1.1;">YOUR NEXT LOOK<br>STARTS HERE.</h2>
+      <p style="color: rgba(245,242,234,0.8); max-width: 500px; margin: 0 auto 2.5rem auto; font-size: 1.05rem;">Join the STACKLY movement and define your personal style statement.</p>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="404.html" class="btn-accent">SHOP COLLECTION</a>
+        <a href="404.html" class="btn-outline">CREATE ACCOUNT</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="assets/logo01.webp" alt="STACKLY Logo">
+        </a>
+        <p>Designed for those who define their own style.</p>
+        <div class="social-icons">
+          <a href="404.html" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="404.html" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <div class="footer-title">QUICK LINKS</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Collections.html">Collections</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">FASHION</div>
+        <ul class="footer-links">
+          <li><a href="404.html">New Arrivals</a></li>
+          <li><a href="404.html">Best Sellers</a></li>
+          <li><a href="404.html">Trending</a></li>
+          <li><a href="404.html">Limited Edition</a></li>
+          <li><a href="404.html">Sale</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">CUSTOMER</div>
+        <ul class="footer-links">
+          <li><a href="404.html">Size Guide</a></li>
+          <li><a href="404.html">Shipping</a></li>
+          <li><a href="404.html">Returns</a></li>
+          <li><a href="404.html">Privacy</a></li>
+          <li><a href="404.html">Terms</a></li>
+          <li><a href="404.html">Help Center</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 STACKLY FASHION. ALL RIGHTS RESERVED.</div>
+      <div>SALEM • PARIS • NEW YORK • MILAN</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details — STACKLY Luxury Fashion</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-logo">STACKLY</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo01.webp" alt="STACKLY Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="Shop.html" class="nav-link active">Shop</a></li>
+        <li><a href="Collections.html" class="nav-link">Collections</a></li>
+        <li><a href="About.html" class="nav-link">About</a></li>
+        <li><a href="Contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="Login.html" class="login-nav-btn">Login</a>
+        <button class="icon-btn cart-icon-btn"><i class="fa-solid fa-bag-shopping"></i><span class="badge cart-count-badge">0</span></button>
+        <button class="hamburger-btn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <button class="mobile-menu-close">✕</button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+      <li><a href="Collections.html">Collections</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="Login.html" class="btn-accent" style="display: block; text-align: center;">LOGIN / ACCOUNT</a>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-drawer-header"><h3>YOUR CART</h3><button class="cart-close-btn">✕</button></div>
+    <div class="cart-drawer-body" id="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal"><span>SUBTOTAL</span><span id="cart-drawer-total">₹0</span></div>
+      <a href="404.html" class="btn-primary" style="display: block; text-align: center;">PROCEED TO CHECKOUT</a>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL SECTION -->
+  <section class="product-detail-container" id="product-detail-section">
+    
+    <!-- LEFT: GALLERY -->
+    <div class="product-gallery">
+      <div class="main-image-container">
+        <img id="pd-main-img" src="assets/product-1.webp" alt="Product Main Image">
+      </div>
+    </div>
+
+    <!-- RIGHT: PRODUCT INFORMATION -->
+    <div class="product-info-panel">
+      <div>
+        <div style="font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; margin-bottom: 0.5rem;">AUTUMN / WINTER 2026</div>
+        <h1 class="product-title-detail" id="pd-title">STACKLY URBAN RUNNER 01</h1>
+      </div>
+
+      <div class="product-price-detail" id="pd-price">₹5,999</div>
+
+      <div class="product-rating-detail">
+        ★★★★★ <span style="color: rgba(17,17,17,0.6);">(4.9 • 84 Client Reviews)</span>
+      </div>
+
+      <p class="product-desc-short">
+        Contemporary everyday fashion piece designed for comfort, movement and effortless styling. Built from structured premium cotton blend.
+      </p>
+
+      <!-- COLOR SELECTOR -->
+      <div class="option-group">
+        <div class="option-label">COLOR:</div>
+        <div class="color-selector-detail" id="pd-color-selector">
+          <!-- Rendered by js/product.js -->
+        </div>
+      </div>
+
+      <!-- SIZE SELECTOR -->
+      <div class="option-group">
+        <div class="option-label">SELECT SIZE:</div>
+        <div class="size-selector-detail" id="pd-size-selector">
+          <!-- Rendered by js/product.js -->
+        </div>
+      </div>
+
+      <!-- QUANTITY -->
+      <div class="option-group">
+        <div class="option-label">QUANTITY:</div>
+        <div class="quantity-control">
+          <button class="qty-action" onclick="changeQuantity(-1)">−</button>
+          <span class="qty-val" id="pd-qty-val">1</span>
+          <button class="qty-action" onclick="changeQuantity(1)">+</button>
+        </div>
+      </div>
+
+      <!-- ACTION BUTTONS -->
+      <div class="action-buttons">
+        <button class="btn-accent" id="pd-add-to-cart-btn" onclick="handleAddToCartDetail()">ADD TO CART</button>
+        <button class="btn-primary" onclick="handleBuyNowDetail()">BUY NOW</button>
+      </div>
+
+      <div style="margin-top: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border-dark); display: flex; gap: 2rem; font-size: 0.8rem; color: rgba(17,17,17,0.7);">
+        <div><i class="fa-solid fa-truck-fast" style="color: var(--accent);"></i> Free Express Shipping</div>
+        <div><i class="fa-solid fa-shield-cat" style="color: var(--accent);"></i> 100% Authentic Guaranteed</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PRODUCT INFORMATION TABS -->
+  <div class="product-tabs-container">
+    <div class="tab-headers">
+      <button class="tab-header-btn active" data-tab="desc">Description</button>
+      <button class="tab-header-btn" data-tab="materials">Materials</button>
+      <button class="tab-header-btn" data-tab="fit">Fit & Sizing</button>
+      <button class="tab-header-btn" data-tab="care">Care Instructions</button>
+      <button class="tab-header-btn" data-tab="shipping">Shipping & Returns</button>
+    </div>
+
+    <div class="tab-content active" id="tab-desc">
+      <p>
+        The STACKLY Urban Runner 01 represents our vision for architectural everyday wear. Featuring a tailored relaxed silhouette, dropped shoulder seam, and reinforced double-stitched hems, this garment combines urban street aesthetics with luxury atelier craftsmanship.
+      </p>
+    </div>
+
+    <div class="tab-content" id="tab-materials">
+      <p>
+        • 85% Organic Heavyweight Cotton, 15% Recycled Polyester.<br>
+        • 420 GSM structured fleece interior.<br>
+        • Custom gold-tone hardware detailing.
+      </p>
+    </div>
+
+    <div class="tab-content" id="tab-fit">
+      <p>
+        Designed for a contemporary relaxed fit. Take your normal size for an editorial relaxed drop, or size down for a classic tailored silhouette. Model is 185 cm wearing size M.
+      </p>
+    </div>
+
+    <div class="tab-content" id="tab-care">
+      <p>
+        • Machine wash cold on gentle cycle with like colors.<br>
+        • Do not bleach.<br>
+        • Hang dry in shade.<br>
+        • Warm iron inside out if needed.
+      </p>
+    </div>
+
+    <div class="tab-content" id="tab-shipping">
+      <p>
+        • Standard Express Delivery: 2-4 business days.<br>
+        • Complimentary 30-day returns and size concierge exchanges via client dashboard portal.
+      </p>
+    </div>
+  </div>
+
+  <!-- Common Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html"><img src="assets/logo01.webp" alt="STACKLY Logo"></a>
+        <p>Designed for those who define their own style.</p>
+        <div class="social-icons">
+          <a href="404.html" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="social-link"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+          <a href="404.html" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">QUICK LINKS</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Collections.html">Collections</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">FASHION</div>
+        <ul class="footer-links">
+          <li><a href="404.html">New Arrivals</a></li>
+          <li><a href="404.html">Best Sellers</a></li>
+          <li><a href="404.html">Trending</a></li>
+          <li><a href="404.html">Limited Edition</a></li>
+          <li><a href="404.html">Sale</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">CUSTOMER</div>
+        <ul class="footer-links">
+          <li><a href="404.html">Size Guide</a></li>
+          <li><a href="404.html">Shipping</a></li>
+          <li><a href="404.html">Returns</a></li>
+          <li><a href="404.html">Privacy</a></li>
+          <li><a href="404.html">Terms</a></li>
+          <li><a href="404.html">Help Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 STACKLY FASHION. ALL RIGHTS RESERVED.</div>
+      <div>SALEM • PARIS • NEW YORK • MILAN</div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
