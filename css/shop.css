@@ -203,15 +203,19 @@
 @media (max-width: 1024px) {
   .shop-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .filter-sidebar {
     position: static;
-    display: none;
-  }
-  
-  .filter-sidebar.active {
     display: block;
+    width: 100%;
+    margin-bottom: 2.2rem;
+    padding: 1.8rem 1.4rem;
+    background: #FFFFFF;
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   }
   
   .products-grid {

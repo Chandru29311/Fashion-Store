@@ -106,19 +106,22 @@ img, video, canvas, svg {
   .product-detail-container,
   .shop-container,
   .about-hero-grid,
-  .about-story-grid {
+  .about-story-grid,
+  .story-section {
     grid-template-columns: 1fr !important;
-    gap: 3rem !important;
+    gap: 2.5rem !important;
   }
 
   .filter-sidebar {
-    position: static;
-    display: none;
-  }
-
-  .filter-sidebar.active {
-    display: block;
-    margin-bottom: 2rem;
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+    padding: 1.8rem 1.4rem !important;
+    background: #FFFFFF !important;
+    border: 1px solid var(--border-dark) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
   }
 
   .style-matrix-grid {
@@ -210,6 +213,163 @@ img, video, canvas, svg {
     border: 1.5px solid #0B0C10 !important;
     box-shadow: 0 0 10px rgba(201, 160, 80, 0.9) !important;
     z-index: 2 !important;
+  }
+
+  /* --- Mobile Responsive Fix for Editorial Fashion Poster Section --- */
+  .editorial-image-wrapper {
+    margin-bottom: 2.8rem !important;
+    max-width: 100% !important;
+  }
+
+  .editorial-inset-card {
+    bottom: -1rem !important;
+    right: 0 !important;
+    width: 44% !important;
+    max-width: 180px !important;
+  }
+
+  /* --- Mobile Responsive Filter Sidebar Section Enhancements --- */
+  .filter-sidebar {
+    padding: 1.6rem 1.25rem !important;
+    background: #FFFFFF !important;
+  }
+
+  .filter-section {
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 1.2rem !important;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.12) !important;
+  }
+
+  .filter-section:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .filter-title {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.1em !important;
+    color: var(--primary) !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .filter-checkbox {
+    font-size: 0.9rem !important;
+    padding: 0.25rem 0 !important;
+  }
+
+  .filter-checkbox input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .size-btn {
+    padding: 0.5rem 0.9rem !important;
+    font-size: 0.8rem !important;
+    min-width: 42px !important;
+  }
+
+  .color-option {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* --- Mobile Responsive Fix for Atelier Vault & Countdown Banner --- */
+  .shop-vault-banner {
+    grid-template-columns: 1fr !important;
+    padding: 1.8rem 1.25rem !important;
+    gap: 2rem !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .shop-vault-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.8rem !important;
+  }
+
+  .shop-vault-buttons .btn-accent,
+  .shop-vault-buttons .btn-outline {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .shop-countdown-box {
+    padding: 1.5rem 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .shop-timer-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.4rem !important;
+  }
+
+  .timer-unit {
+    padding: 0.75rem 0.2rem !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .timer-number {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .timer-label {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  /* --- Mobile Responsive Fix for Craftsmanship & Fabric Masterclass Section --- */
+  .craftsmanship-section {
+    padding: 3.5rem 0 !important;
+  }
+
+  .craftsmanship-section h2 {
+    font-size: clamp(1.5rem, 5.5vw, 2.4rem) !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .craftsmanship-grid {
+    margin-top: 2rem !important;
+    gap: 2rem !important;
+  }
+
+  .fabric-tab-item {
+    padding: 1.2rem 1rem !important;
+  }
+
+  .fabric-tab-title {
+    font-size: 1.15rem !important;
+  }
+
+  /* --- Mobile Responsive Fixes for About Page --- */
+  .about-hero {
+    padding: 6.5rem 1.25rem 4rem 1.25rem !important;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 4.2rem) !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .story-content h2 {
+    font-size: clamp(1.6rem, 5.5vw, 3rem) !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .journey-timeline {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.8rem !important;
   }
 
   .section-padding {
@@ -377,6 +537,41 @@ img, video, canvas, svg {
     max-height: 56px !important;
   }
 
+  .editorial-inset-card {
+    bottom: -0.8rem !important;
+    right: 0 !important;
+    width: 42% !important;
+    max-width: 150px !important;
+  }
+
+  .journey-timeline {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .shop-vault-banner {
+    padding: 1.4rem 0.8rem !important;
+  }
+
+  .shop-countdown-box {
+    padding: 1.2rem 0.5rem !important;
+  }
+
+  .shop-timer-grid {
+    gap: 0.3rem !important;
+  }
+
+  .timer-unit {
+    padding: 0.6rem 0.15rem !important;
+  }
+
+  .timer-number {
+    font-size: 1.35rem !important;
+  }
+
+  .timer-label {
+    font-size: 0.6rem !important;
+  }
+
   .section-padding {
     padding: 3rem 1rem !important;
   }
@@ -491,6 +686,33 @@ img, video, canvas, svg {
   .cart-icon-btn {
     font-size: 1.2rem !important;
     padding: 0.4rem 0.5rem !important;
+  }
+
+  .editorial-inset-card {
+    bottom: -0.6rem !important;
+    right: 0 !important;
+    width: 40% !important;
+    max-width: 130px !important;
+  }
+
+  .shop-vault-banner {
+    padding: 1.2rem 0.6rem !important;
+  }
+
+  .shop-countdown-box {
+    padding: 1rem 0.3rem !important;
+  }
+
+  .shop-timer-grid {
+    gap: 0.2rem !important;
+  }
+
+  .timer-number {
+    font-size: 1.15rem !important;
+  }
+
+  .timer-label {
+    font-size: 0.55rem !important;
   }
 
   .section-padding {
